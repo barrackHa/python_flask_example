@@ -20,7 +20,8 @@ jobs:
                 docker run -d -p 3000:3000 tmp
                 sleep 5
                 docker ps
-                curl http://0.0.0.0:3000/
+                lsof -i :3000
+                curl http://127.0.0.1:3000/
                 ./tests/blackbox_tests/test.sh
                 
 
