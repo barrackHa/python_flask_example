@@ -18,6 +18,7 @@ jobs:
           name: BB test
           command: |
                 docker run -d -p 3000:3000 tmp
+                sleep 5
                 docker ps
                 curl http://0.0.0.0:3000/
                 ./tests/blackbox_tests/test.sh
