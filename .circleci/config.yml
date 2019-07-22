@@ -18,6 +18,6 @@ jobs:
           name: BB test
           command: |
              docker run -d tmp
-             pwd
-             ls -ltrah     
+             ./test/blackbox_tests/test.sh
+                
 
