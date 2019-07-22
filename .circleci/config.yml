@@ -14,5 +14,10 @@ jobs:
           name: Build container
           command: docker build -t tmp .
 
-
+      - run:
+          name: BB test
+          command: |
+             docker run -d tmp
+             pwd
+             ls -ltrah     
 
