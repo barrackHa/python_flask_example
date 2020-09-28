@@ -26,7 +26,14 @@
 						"containerPort": 3000, 
 						"hostPort": 3000,
 						"protocol": "tcp"
-				}]
+				}],
+				"volumes":[
+					{
+						"localPath": "${workspaceFolder}/",
+						"containerPath": "/app",
+						"permissions": "rw"
+					}
+				]
 			},
 			"python": {
 				"args": [
