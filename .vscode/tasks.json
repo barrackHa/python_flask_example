@@ -9,7 +9,7 @@
 				"tag": "pythonflaskexample:latest",
 				"dockerfile": "${workspaceFolder}/Dockerfile",
 				"context": "${workspaceFolder}",
-				"pull": true
+				"pull": false
 			}
 		},
 		{
@@ -21,7 +21,12 @@
 			"dockerRun": {
 				"env": {
 					"FLASK_APP": "app.py"
-				}
+				},
+				"ports": [{
+						"containerPort": 3000, 
+						"hostPort": 3000,
+						"protocol": "tcp"
+				}]
 			},
 			"python": {
 				"args": [
