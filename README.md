@@ -1,1 +1,3 @@
-# python_flask_example
+# Python Flask Example
+
+To run exe '$ docker-compose up -d'
